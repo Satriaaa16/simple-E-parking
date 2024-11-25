@@ -1,0 +1,21 @@
+# masukan command ini ke sql query di php my admin
+CREATE Database e_parking;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin', 'user') DEFAULT 'user'
+);
+
+# ini juga
+
+CREATE TABLE vehicles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_kendaraan VARCHAR(100),
+    plat_nomor VARCHAR(20),
+    jenis_kendaraan ENUM('mobil', 'motor'),
+    foto_kendaraan VARCHAR(255),
+    harga INT
+);
+
